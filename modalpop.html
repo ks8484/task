@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    @keyframes fadeInUp {
+        from {
+            transform: translate3d(0, 40px, 0)
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeInUp {
+        from {
+            transform: translate3d(0, 40px, 0)
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+    }
+
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-fill-mode: both
+    }
+
+    .animatedFadeInUp {
+        opacity: 0
+    }
+
+    .fadeInUp {
+        opacity: 0;
+        animation-name: fadeInUp;
+        -webkit-animation-name: fadeInUp;
+    }
+
+    .modal-content {
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .modal {
+        padding: 0px;
+    }
+
+    .modal-dialog {
+        padding: 0px !important;
+        margin: 0px !important;
+        border-radius: 0px;
+        bottom: -1px;
+        overflow: hidden;
+    }
+
+    .fullwidth {
+        width: 100%;
+        height: 100%;
+    }
+    #fullsearch
+    .modal-content {
+    border: 0px;
+    border-radius: 0px;
+    height: 100%;
+    /* top: -2px; */
+    /* margin-top: -2px; */
+}
+</style>
+
+<body>
+
+    <div class="container">
+
+        <!-- Button to Open the Modal -->
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button " class="btn btn-primary fixed-bottom" data-toggle="modal" data-target="#myModal">
+                    Search
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button type="button " class="btn btn-primary " data-toggle="modal"
+                    data-target="#fullsearch">
+                    Full Width
+                </button>
+            </div>
+        </div>
+
+
+        <!-- The Modal -->
+        <div class="modal  animated animatedFadeInUp fadeInUp" id="myModal">
+            <div class="modal-dialog  fixed-bottom">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Search </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal  " id="fullsearch">
+            <div class="modal-dialog  fixed-bottom fullwidth">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Search </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
